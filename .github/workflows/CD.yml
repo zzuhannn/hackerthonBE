@@ -29,7 +29,7 @@ jobs:
           host: ${{ secrets.SSH_HOST }}
           key: ${{ secrets.SSH_KEY }}
           source: "build/libs/*.jar" # Github Actions 워크플로우가 실행되는 runner환경에서의 경로
-          target: "/home/ubuntu/hackathon/build/libs/" # 원격 서버 파일 경로
+          target: "/home/ubuntu/hackathon/" # 원격 서버 파일 경로
 
       - name: docker compose up -> make (mysql,spring, nginx)
         uses: appleboy/ssh-action@master
